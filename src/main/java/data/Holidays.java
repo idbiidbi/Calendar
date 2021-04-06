@@ -10,7 +10,8 @@ public enum Holidays {
     MOTHERSDAY("Mothers Day"),
     LIGO("LIGO"),
     INDEPENDENCEDAY("Independence Day of Latvia"),
-    CHRISTMAS("Christmas");
+    CHRISTMAS("Christmas"),
+    NONE("NONE");  // используется для варианта с FEBRUARY
 
     private String holidayName;
 
