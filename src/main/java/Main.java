@@ -2,16 +2,13 @@
 import data.Holidays;
 import data.Months;
 
+import javax.swing.JOptionPane;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-//        JOptionPane.showInputDialog("Enter the month: ");
-//        System.out.print("Enter the month: ");
-//        String month = input.nextLine();
 
         Map<String, List<Holidays>> dictionary = new HashMap<>();
 
@@ -62,9 +59,12 @@ public class Main {
         dictionary.put(Months.DECEMBER.getName(), decemberList);
 
         while (true) {
+//            JOptionPane.showInputDialog("Enter the month: ");
             System.out.print("Enter the month: ");
             String month = input.nextLine();
             if (month.isBlank() || !dictionary.containsKey(month.toLowerCase())) {
+
+//                JOptionPane.showMessageDialog(null,"Incorrect month name");
                 System.out.println("Incorrect month name");
                 continue;
 
@@ -81,6 +81,7 @@ public class Main {
 //              }
 
                  else {
+
                     System.out.print("There are the following holidays in " + month + ": \n");
                     for (var hol: holidays) {
                         System.out.println(hol.getHolidayName());
